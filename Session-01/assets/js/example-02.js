@@ -1,0 +1,1 @@
+document.getElementByID('output-area').innerText = "hello world";
