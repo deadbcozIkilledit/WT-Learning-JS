@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Session 01 | Example 01</title>
+
+    <link rel="stylesheet" href="assets\css\tailwind.css">
+
+    <script src="assets\js\example-01.js" defer></script>
+    <script src="assets\js\jokes.js" defer></script>
+    
+</head>
+<body class="h-screen flex flex-col">
+
+    <header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+        <h1>JavaScript</h1>
+        <nav class="flex flex-row gap-4">
+            <a href="example-01.html">Random Joke</a>
+            <a href="example-02.html">Wikipedia Search</a>
+            <a href="example-03.html">Digital Clock</a>
+        </nav>
+    </header>
+    
+    <main class="w-4/5 mx-auto my-12 grow">
+        <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Random Joke</h1>
+    
+        <div id="joke"
+             class="w-full text-xl font-light
+                    bg-stone-700 text-white p-6 m-6 rounded-xl h-64">
+            <h3 id="joke-topic" class="text-3xl mb-4"></h3>
+            <p id="joke-content">
+            Press the button for a random joke.
+            </p>
+        </div>
+    
+        <div class="p-2 m-4 mx-auto w-64 ">
+            <button type="button" id="get-joke"
+                    class="w-64 p-4 rounded-full
+                           bg-emerald-700 text-white border-2 border-emerald-900
+                           hover:bg-emerald-100 hover:text-black hover:border-emerald-500
+                           transition ">
+                New Joke Please
+            </button>
+        </div>
+    
+    </main>
+    
+    <footer class="mt-6 px-6 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+        <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+        <div class="flex-right">Creative Commons License to be added.</div>
+    </footer>
+    </body>
+    </html>

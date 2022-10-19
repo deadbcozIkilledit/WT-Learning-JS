@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Session 02 | Example 02</title>
+
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <script src="assets\js\example-02.js" defer></script>
+    
+</head>
+<body class="h-screen flex flex-col">
+
+    <header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+        <h1>JavaScript</h1>
+        <nav class="flex flex-row gap-4">
+            <a href="example-01.html">Random Joke</a>
+            <a href="example-02.html">Wikipedia Search</a>
+            <a href="example-03.html">Digital Clock</a>
+        </nav>
+    </header>
+    
+    <main class="w-4/5 mx-auto my-12 grow">
+        <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Wikipedia Search</h1>
+    
+        <form id="SearchForm">
+            <input id="SearchInput"
+                   placeholder="Type a keyword and press Enter to search"
+                   type="search"
+                   class="w-full text-xl text-stone-700 bg-white
+                          form-input ring-inset
+                          hover:border-blue-500
+                          border-stone-400
+                          p-4 m-6 mx-0 rounded-xl"
+                   autofocus/>
+        </form>
+    
+        <section class="w-full bg-stone-100 p-2 border border-stone-500 rounded-xl">
+            <div class="bg-stone-500 flex flex-row p-2 w-auto rounded-full mb-4 text-white hidden" id="LoadingSpinner">
+                <svg class="animate-spin ml-1 mr-3 h-6 w-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Loading...
+            </div>
+            <div class="transition duration-500" id="SearchResults"></div>
+        </section>
+    
+    
+        <div class="p-2 m-4 ">
+            <p>If you have not read the ReadMe.md file then you will need to run the
+                following command for the Tailwind Form utilities to be available:</p>
+            <pre><code>npm install -D @tailwindcss/forms</code></pre>
+            <p>Then add the <code>require</code> line to the plugins section of your
+                <code>tailwind.config.js</code>, as shown below:</p>
+            <pre><code>plugins: [
+        require('@tailwindcss/forms'),
+        // ... other plugins added here, after the forms plugin
+      ],</code></pre>
+        </div>
+    
+    </main>
+    
+    <footer class="mt-6 px-6 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+        <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+        <div class="flex-right">Creative Commons License to be added.</div>
+    </footer>
+    </body>
+    </html>
